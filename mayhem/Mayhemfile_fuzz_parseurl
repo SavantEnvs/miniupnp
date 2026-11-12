@@ -1,0 +1,9 @@
+project: savantenvs/miniupnp
+target: fuzz_parseurl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_parseurl/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_parseurl
+    libfuzzer: true
+    timeout: 5

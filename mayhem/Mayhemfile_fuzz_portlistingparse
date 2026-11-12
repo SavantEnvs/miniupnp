@@ -1,0 +1,9 @@
+project: savantenvs/miniupnp
+target: fuzz_portlistingparse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_portlistingparse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_portlistingparse
+    libfuzzer: true
+    timeout: 5

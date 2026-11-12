@@ -1,0 +1,9 @@
+project: savantenvs/miniupnp
+target: fuzz_igddesc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_igddesc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_igddesc
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/miniupnp
+target: testminixml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/testminixml/testsuite
+cmds:
+  - cmd: /mayhem/testminixml
+    libfuzzer: true
+    timeout: 5
